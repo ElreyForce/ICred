@@ -1,0 +1,7 @@
+name: ICred
+version: 0.1
+description: Better Redstone Plugin
+author: ElreyForce
+website: http://www.elreyforce.org
+
+main: org.elreyforce.mc.ICred.ICred
