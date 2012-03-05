@@ -8,12 +8,18 @@ public class ICred extends JavaPlugin {
 	
 	Logger log;
 	private ICredCommandExecutor cmdExecutor;
+	private ICredListener plgListener;
 	
 	public void onEnable(){
+		
+		// Bind Logger
 		log = this.getLogger();
 		
+		// Init Command Executor
 		cmdExecutor = new ICredCommandExecutor(this);
-		getCommand("icred").setExecutor(cmdExecutor);
+		
+		// Init Event Listener
+		plgListener = new ICredListener(this);
 		
 		log.info("ICred Version 0.1 enabled.");
 	}

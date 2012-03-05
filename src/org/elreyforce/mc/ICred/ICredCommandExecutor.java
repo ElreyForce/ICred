@@ -13,6 +13,8 @@ public class ICredCommandExecutor implements CommandExecutor {
 	public ICredCommandExecutor(ICred ICred) {
 		this.ICred = ICred;
 		
+		// Register Executor
+		this.ICred.getCommand("icred").setExecutor(this);
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
