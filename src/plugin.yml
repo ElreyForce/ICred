@@ -5,3 +5,24 @@ author: ElreyForce
 website: http://www.elreyforce.org
 
 main: org.elreyforce.mc.ICred.ICred
+
+commands:
+  icred:
+    description: This is a demo command.
+    aliases: [ir]
+    usage: /icred
+    permission: icred.help
+    permission-message: You don't have permission icred.help
+permissions:
+  icred.*:
+    description: Gives access to all ICred commands
+    children:
+      icred.help: true
+      icred.version: true
+  icred.help:
+    description: Allows to display the help 
+    default: true
+  icred.version:
+    description: Allows to display the version 
+    default: op
+    
